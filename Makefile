@@ -20,8 +20,8 @@ clean:
 Parser.class: TS_entry.java TabSimb.java Yylex.java Parser.java
 	$(JAVAC) Parser.java
 
-Yylex.java: exemploGC.flex
-	$(JFLEX) exemploGC.flex
+Yylex.java: Lexico.flex
+	$(JFLEX) Lexico.flex
 
-Parser.java: exemploGC.y
-	$(BYACCJ) exemploGC.y
+Parser.java: Semantico.y
+	$(BYACCJ) Semantico.y

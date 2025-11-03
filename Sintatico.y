@@ -54,7 +54,6 @@ cmd :  ID '=' exp	';' {  System.out.println("\tPOPL %EDX");
   						   System.out.println("\tMOVL %EDX, _"+$1);
 					     }
 			| '{' lcmd '}' { System.out.println("\t\t# terminou o bloco..."); }
-					     
 					       
       | WRITE '(' LIT ')' ';' { strTab.add($3);
                                 System.out.println("\tMOVL $_str_"+strCount+"Len, %EDX"); 
