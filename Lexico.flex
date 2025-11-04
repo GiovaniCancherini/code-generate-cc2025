@@ -23,11 +23,9 @@ NL  = \n | \r | \r\n
 
 %%
 
-
 "$TRACE_ON"  { yyparser.setDebug(true);  }
 "$TRACE_OFF" { yyparser.setDebug(false); }
 "$MOSTRA_TS" { yyparser.listarTS(); }
-
 
 {NL}   {yyline++;}
 [ \t]+ { }
@@ -77,8 +75,6 @@ if   { return Parser.IF; }
 else   { return Parser.ELSE; }
 true   { return Parser.TRUE; }
 false   { return Parser.FALSE; }
-
-
 
 [a-zA-Z]+([a-zA-Z0-9]+)? { yyparser.yylval = new ParserVal(yytext());
             return Parser.ID; }

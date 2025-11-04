@@ -1,10 +1,9 @@
-	
+
 %{
   import java.io.*;
   import java.util.ArrayList;
   import java.util.Stack;
 %}
- 
 
 %token ID, INT, FLOAT, BOOL, NUM, LIT, VOID, MAIN, READ, WRITE, IF, ELSE
 %token WHILE,TRUE, FALSE, IF, ELSE
@@ -27,7 +26,6 @@
 %type <sval> LIT
 %type <sval> NUM
 %type <ival> type
-
 
 %%
 
@@ -420,4 +418,3 @@ exp :  NUM  { System.out.println("\tPUSHL $"+$1); }
 	           System.out.println("_str_"+i+"Len = . - _str_"+i);  
 	      }		
    }
-   
